@@ -13,7 +13,13 @@
     }
     $miejsca = $db->query("SELECT * FROM seats ORDER BY row_num, seat_num");
 ?>
-
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kino</title>
+</head>
+<body>
 <body>
     <div class="sala">
         <?php while($m = $miejsca->fetch_assoc()): ?>
