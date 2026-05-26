@@ -18,6 +18,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Kino</title>
+        <style>
+        body {
+            background: #00160e;
+            color: #000000;
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .sala {
+            display: grid;
+            grid-template-columns: repeat(5, 39px);
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .miejsce {
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            display: block;
+        }
+        .wolne { background: #2ecc71; cursor: pointer; }
+        .wolne:hover { background: #27ae60; border-radius: 14px;}
+        .zajete { background: #e74c3c; pointer-events: none; }
+    </style>
 </head>
 <body>
 <body>
