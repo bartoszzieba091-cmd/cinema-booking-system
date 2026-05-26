@@ -13,3 +13,20 @@
     }
     $miejsca = $db->query("SELECT * FROM seats ORDER BY row_num, seat_num");
 ?>
+
+<body>
+    <div class="sala">
+        <?php while($m = $miejsca->fetch_assoc()): ?>
+            <?php if ($m['is_reserved'] == 1): ?>
+                <div class="miejsce zajete"></div>
+            <?php else: ?>
+                <a href="?id=<?= $m['id'] ?>" class="miejsce wolne"></a>
+            <?php endif; ?>
+        <?php endwhile; ?>
+    </div>
+    <form method="POST">
+        <button type="submit" name="reset">reset</button>
+    </form>
+</body>
+</html>
+<?php $db->close(); ?>
